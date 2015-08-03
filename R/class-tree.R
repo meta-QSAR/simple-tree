@@ -72,3 +72,30 @@ setMethod(
     path.n1[mch[length(mch)]]
   }
 )
+
+setGeneric(name="distMatrix",
+           def=function(object){standardGeneric("distMatrix")}
+)
+
+setMethod(
+  f="distMatrix", signature="tree",
+  definition=function(object){
+    n.nodes <- length(object@tree.list)
+    res <- matrix(nrow = n.nodes, ncol = n.nodes)
+    nodes.id <- names(object@tree.list)
+    rownames(res) <- nodes.id
+    colnames(res) <- nodes.id
+#    lapply(1:n.nodes, function(x){
+#      lapply(x:n.nodes, function(y){
+    for(x in 1:n.nodes){
+      for(y in x:n.nodes){
+        res[x,y] <- distNodes(object, nodes.id[x], nodes.id[y])
+      }
+    }
+
+#      })
+#    })
+    res[lower.tri(res)] <- t(res)[lower.tri(res)]
+    res
+  }
+)
