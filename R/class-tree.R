@@ -1,3 +1,7 @@
+#' An S4 class to represent a tree.
+#'
+#' @slot tree.list A list of nodes (node class)
+#'
 .tree<-setClass(
   Class = "tree",
   slots=c(
