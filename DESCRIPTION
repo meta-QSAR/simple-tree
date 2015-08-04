@@ -7,6 +7,5 @@ Author: Ivan Olier
 Maintainer: Ivan Olier <iaolier@gmail.com>
 Description: A small R package to deal with trees
 License: GPL-2
-LazyData: TRUE
 Depends:
     plyr

@@ -11,7 +11,7 @@
 \item{object}{A tree object.}
 }
 \value{
-\code{distMatrix} returns a numeric value.
+\code{distMatrix} returns a matrix.
 }
 \description{
 \code{distMatrix} returns a matrix of distances between all nodes.
