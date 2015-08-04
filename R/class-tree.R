@@ -137,7 +137,7 @@ setGeneric(name="distMatrix",
 #' \code{distMatrix} returns a matrix of distances between all nodes.
 #'
 #' @param object A tree object.
-#' @return \code{distMatrix} returns a numeric value.
+#' @return \code{distMatrix} returns a matrix.
 #'
 setMethod(
   f="distMatrix", signature="tree",
